@@ -37,10 +37,7 @@ nav {
     color: var(--bg-accent);
     cursor: pointer;
 }
-/* .headerImage {
-    width: 100%;
-    
-} */
+
 .headerImage img {
     width: 100%;
 }
@@ -99,7 +96,7 @@ section:nth-child(2) {
  }
 
  section:nth-child(3) h1 {
-    color: hsl(35, 77%, 62%);
+    color: var(--bg-primary);
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
