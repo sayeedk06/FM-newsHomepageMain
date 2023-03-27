@@ -37,10 +37,15 @@ nav {
     color: var(--bg-accent);
     cursor: pointer;
 }
-
+/* .headerImage {
+    width: 100%;
+    
+} */
 .headerImage img {
     width: 100%;
 }
+
+
 main {
     display: grid;
     gap: 2rem;
@@ -229,6 +234,7 @@ section:nth-child(2) {
     .nav-list[data-visible='true'] {
         transform: translateX(0%);
     }
+
     main {
         display: grid;
         gap: 0rem;
