@@ -30,9 +30,12 @@
 
 <body>
   <header>
+    <div class="logo">
+      <img src="./assets/images/logo.svg" alt="companyLogo">
+    </div>
     <nav>
-      <ul class="nav-list">
-        <li class="logo"><img src="./assets/images/logo.svg" alt="companyLogo"></li>
+      <button class="hamburgerMenu-toggle" aria-controls="nav-list" aria-expanded="false"><span class="sr-only">menu</span></button>
+      <ul id='nav-list' data-visible="false" class="nav-list">
         <li class="nav-elements">Home</li>
         <li class="nav-elements">New</li>
         <li class="nav-elements">Popular</li>
@@ -120,16 +123,31 @@
     </section>
   </main>
 
-
-
-
-
-
-
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://sayeedshaiban.fyi/">Sayeed Md. Shaiban</a>.
-  </div>
+  </div> -->
+
+  <script>
+    const hamburgertoggle = document.querySelector('.hamburgerMenu-toggle');
+    const visibility = document.querySelector('[data-visible=false]');
+    const bgBodyColor = document.querySelector('body')
+    hamburgertoggle.addEventListener("click", ()=> {
+      var check = visibility.getAttribute('data-visible');
+
+      if (check === 'false'){
+        visibility.setAttribute('data-visible', 'true');
+        bgBodyColor.style.backgroundColor = 'hsl(233, 8%, 79%)';
+        hamburgertoggle.setAttribute('aria-expanded', 'true');
+
+      }else if(check === 'true') {
+        visibility.setAttribute('data-visible', 'false');
+        bgBodyColor.style.backgroundColor = 'hsl(36, 100%, 99%)';
+        hamburgertoggle.setAttribute('aria-expanded', 'false')
+      }
+    });
+  </script>
+
 </body>
 
 </html>
